@@ -15,3 +15,15 @@ sequelize.sync()
 });
 
 app.use(bodyParser.json());
+
+app.use("/api/forecasts", router);
+app.get("/api", (req, res) => {
+  res.send("Welcome to my Weather API!");
+});
+app.get("*", (req, res) =>
+  res.status(404).send("There is no content at this route.")
+);
+
+app.listen(port, () => console.log(`Server is listening on port ${port}`));
+
+export default app;

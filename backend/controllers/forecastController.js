@@ -1,7 +1,8 @@
 import { Forecast } from "../models/forecastsModel.js";
 
 
-const ForcastsArr = ["Rain", "Clear", "Wind", "Sunny",  "Cloudy"];
+
+const forecastsArr = ["Rain", "Clear", "Wind", "Sunny", "Cloudy"];
 
 export const getForecasts = (req, res) => {
   Forecast.findAll()
